@@ -74,6 +74,9 @@ function main() {
     } if (file != null && file != cachedfile) {
         send = true;
         cachedfile = file;
+    } if (cachedpos != page.line) {
+        send = true;
+        cachedpos = page.line;
     } if (send == true) {
         chrome.runtime.sendMessage({message: page}, function(response) {
             console.log("Received response from background.js:", response);
