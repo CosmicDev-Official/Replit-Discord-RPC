@@ -1,5 +1,6 @@
 let cachedurl;
 let cachedfile;
+let cachedpos;
 
 function pageLoadHandler() { // Waits until the page is fully loaded before initiating the main code
     let scurl = window.location.href.split("https://replit.com/")[1].split("/")[0];
